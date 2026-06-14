@@ -1,5 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Menu, X, MapPin, Calendar, Clock, Mail, Phone, Facebook, Instagram, Youtube, Twitter, ChevronRight, Users, Heart, Book, Home, ChevronLeft, ZoomIn } from 'lucide-react';
+import {
+  Menu, X, MapPin, Calendar, Clock, Mail, Phone,
+  Facebook, Instagram, Youtube, Twitter,
+  ChevronRight, Users, Heart, Book, Home,
+  ChevronLeft, ZoomIn
+} from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const RCCGJesusPillar = () => {
@@ -87,21 +92,24 @@ const RCCGJesusPillar = () => {
   ];
 
   const galleryImages = [
-    { id: 1, category: 'worship', title: 'Sunday Worship', images: ['images/sunday.jpg','images/sunday2.jpg','images/sunday3.jpg', 'images/sundayworship2.jpg', 'images/sundayworship.JPG' ] },
-    { id: 2, category: 'worship', title: 'Praise Session', images: ['images/praise.jpg','images/praise4.JPG', 'images/praise5.JPG'] },
+    { id: 1, category: 'worship', title: 'Sunday Worship', images: ['images/sunday.jpg','images/sunday2.jpg','images/sunday3.jpg', 'images/sundayworship2.jpg', 'images/sundayworship.JPG', 'images/Sday.jpg', 'images/Sday1.jpg' ] },
+    { id: 2, category: 'worship', title: 'Praise Session', images: ['images/praise.jpg','images/praise4.JPG', 'images/praise5.JPG','images/Praise5 2.jpg',' images/PraiseSday.jpg', 'images/PraiseSunday.jpg','images/PraiseSunday1.jpg', 'images/PraiseSunday3.jpg'] },
     { id: 3, category: 'youth', title: 'Youth', images: ['images/youth.jpg','images/youth2.jpg','images/youth3.jpg','images/youth4.jpg'] },
-    { id: 4, category: 'youth', title: 'Young Adults Fellowship', images: ['images/yf3.jpg','images/yf.jpg','images/yf2.jpg'] },
-    { id: 5, category: 'outreach', title: 'Community Outreach', images: ['images/outreach.jpg','images/outreach2.jpg','images/outreach3.jpg','images/outreach4.jpg'] },
-    { id: 6, category: 'events', title: "Women's Program", images: ['images/women2.jpg','images/women3.jpg','images/women4.jpg','images/women5.jpg'] },
-    { id: 7, category: 'prayer', title: 'Prayer Session', images: ['images/prayer1.jpg','images/prayer2.jpg','images/prayer.jpg','images/prayern.jpg'] },
-    { id: 8, category: 'events', title: 'Church Anniversary', images: ['images/anni.jpg','images/anni2.jpg','images/anni3.jpg','images/anni4.jpg','images/anni5.jpg'] }
+    { id: 4, category: 'outreach', title: 'Community Outreach', images: ['images/outreach.jpg','images/outreach2.jpg','images/outreach3.jpg','images/outreach4.jpg'] },
+    { id: 5, category: 'events', title: "Women's Program", images: ['images/women2.jpg','images/women3.jpg','images/women4.jpg','images/women5.jpg'] },
+    { id: 6, category: 'prayer', title: 'Prayer Session', images: ['images/prayer1.jpg','images/prayer2.jpg','images/prayer.jpg','images/prayern.jpg'] },
+    { id: 7, category: 'events', title: 'Church Anniversary', images: ['images/anni.jpg','images/anni2.jpg','images/anni3.jpg','images/anni4.jpg','images/anni5.jpg'] },
+    { id: 8, category: 'events', title: 'Children Sunday', images: ['images/Children.jpg','images/Children1.jpg','images/Children2.jpg','images/Children3.jpg','images/Children3(1).jpg','images/Children5.jpg','images/Children6.jpg','images/Children7.jpg','images/Children7(1).jpg', 'images/Sday5.jpg'] },
+    { id: 9, category: 'department', title: 'Choir', images: ['images/choir6.jpg','images/Choir1.jpg','images/Choir3.jpg','images/Choir4.jpg'] },
+    { id: 10, category: 'department', title: 'Media', images: ['images/Media.jpg'] },
+    { id: 11, category: 'department', title: 'Drama', images: ['images/drama.jpg'] },
+     { id: 12, category: 'department', title: 'Usher', images: ['images/Ushers.jpg'] }
   ];
 
   const funds = [
     { id: 'tithe', label: 'Tithe And Offering', icon: '🌾', desc: 'Your 10% unto the Lord / A freewill offering', bank: 'Access Bank', accountName: 'RCCG Jesus Pillar Tithe', accountNumber: '0044992158' },
     { id: 'offering', label: 'Project Offering', icon: '🕊️', desc: 'Growing Our Church', bank: 'Zenith Bank', accountName: 'RCCG Jesus Pillar', accountNumber: '1214026981' },
-    { id: 'mission', label: 'Children Gift Giving', icon: '🌍', desc: 'Give to the Children Department', bank: 'Zenith Bank', accountName: 'RCCG Jesus Pillar Children Account', accountNumber: '1225585758' },
-    { id: 'building', label: 'Church Anniversary', icon: '🏛️', desc: 'Growing our sanctuary', bank: 'Access Bank', accountName: 'Aremu Aanuoluwapo', accountNumber: '1854106597' },
+    { id: 'mission', label: 'Children Gift Giving', icon: '🌍', desc: 'Give to the Children Department', bank: 'Zenith Bank', accountName: 'RCCG Jesus Pillar Children Account', accountNumber: '1225585758' }
   ];
 
   const filteredImages = activeTab === 'all' ? galleryImages : galleryImages.filter(img => img.category === activeTab);
@@ -243,6 +251,16 @@ const RCCGJesusPillar = () => {
                     <a href="https://www.facebook.com/share/15aifHbLZC5/?mibextid=wwXIfr" className="bg-white/20 hover:bg-white/30 p-4 rounded-full backdrop-blur-sm transition"><Facebook className="w-8 h-8 text-white" /></a>
                     <a href="https://www.instagram.com/rccgyayajp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="bg-white/20 hover:bg-white/30 p-4 rounded-full backdrop-blur-sm transition"><Instagram className="w-8 h-8 text-white" /></a>
                     <a href="https://x.com/rccgyayajp?t=fdQ5YC5NpWy800eiloI03w&s=09" className="bg-white/20 hover:bg-white/30 p-4 rounded-full backdrop-blur-sm transition"><Twitter className="w-8 h-8 text-white" /></a>
+                                   <a
+  href="https://www.tiktok.com/@rccgjesuspillar?is_from_webapp=1&sender_device=pc"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white/20 hover:bg-white/30 p-4 rounded-full backdrop-blur-sm transition"
+>
+  <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+</a>
                   </div>
                 )}
               </div>
@@ -285,87 +303,90 @@ const RCCGJesusPillar = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="pb-10 py-20 px-4 bg-[#f0f0f0f]">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif text-gray-900 mb-4">OUR SERVICES</h2>
-            <p className="text-xl text-gray-900 max-w-3xl mx-auto">We hold various services designed to serve different needs.</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, idx) => (
-              <div key={idx} className="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition">
-                <h3 className="text-2xl font-serif text-indigo-600 mb-6">{service.day}</h3>
-                <div className="space-y-4">
-                  {service.items.map((item, i) => (
-                    <div key={i}>
-                      <p className="font-serif text-gray-900 border-l-4 border-indigo-600 pl-4">{item.name}</p>
-                      <p className="text-gray-600 border-l-4 border-indigo-600 pl-4">{item.time}</p>
-                      <p className="text-gray"><b>{item.caption}</b></p>
-                    </div>
-                  ))}
-                </div>
+    <section id="services" className="pb-10 py-24 px-4 bg-[#FFFCF5] border-t border-[#F4B400]/10">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-16 max-w-2xl mx-auto">
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-500 mb-3">Join Us</p>
+      <h2 className="text-4xl md:text-5xl font-serif text-gray-900 mb-4">Our Services</h2>
+      <p className="text-lg text-gray-600">A rhythm of worship and prayer, every day of the week.</p>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((service, idx) => (
+        <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg border border-gray-100 transition">
+          <h3 className="text-2xl font-serif text-indigo-700 mb-6 pb-4 border-b border-gray-100">{service.day}</h3>
+          <div className="space-y-4">
+            {service.items.map((item, i) => (
+              <div key={i}>
+                {item.name && <p className="font-serif text-gray-900">{item.name}</p>}
+                {item.time && <p className="text-[#F4B400] text-sm font-semibold mt-0.5">{item.time}</p>}
+                {item.caption && <p className="text-gray-600 text-sm italic leading-relaxed mt-1">{item.caption}</p>}
               </div>
             ))}
           </div>
         </div>
-      </section>
-
+      ))}
+    </div>
+  </div>
+</section>
       {/* ─── GALLERY SECTION ─── */}
-      <section id="gallery" className="pb-10 py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-serif text-gray-900 mb-4">GALLERY</h2>
-            <p className="text-gray-500 text-sm mt-2">Tap any photo to view full screen</p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {['all', 'worship', 'youth', 'outreach', 'prayer', 'events'].map((category) => (
-              <button key={category} onClick={() => setActiveTab(category)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition ${activeTab === category ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </button>
-            ))}
-          </div>
+{/* ─── GALLERY SECTION ─── */}
+<section id="gallery" className="pb-10 py-24 px-4 bg-[#F7F8FC]">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-12 max-w-2xl mx-auto">
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-500 mb-3">Moments</p>
+      <h2 className="text-4xl md:text-5xl font-serif text-gray-900 mb-3">Gallery</h2>
+      <p className="text-gray-500 text-sm">Tap any photo to view full screen</p>
+    </div>
 
-          {/* Gallery Grid — 2 cols on mobile, 3 on md, 4 on lg */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {filteredImages.map((item) => {
-              const currentIndex = galleryImageIndexes[item.id] || 0;
-              const images = item.images || [];
-              return (
-                <div
-                  key={item.id}
-                  onClick={() => openLightbox(item.id)}
-                  className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition cursor-pointer"
-                  style={{ aspectRatio: '1/1' }}
-                >
-                  <img
-                    src={images[currentIndex]}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  {/* Multiple images dot indicator */}
-                  {images.length > 1 && (
-                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
-                      {images.map((_, imgIdx) => (
-                        <div key={imgIdx} className={`rounded-full transition-all duration-300 ${imgIdx === currentIndex ? 'bg-white w-4 h-1.5' : 'bg-white/60 w-1.5 h-1.5'}`} />
-                      ))}
-                    </div>
-                  )}
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2 pointer-events-none">
-                    <ZoomIn className="w-8 h-8 text-white" />
-                    <p className="text-white font-semibold text-sm text-center px-3">{item.title}</p>
-                  </div>
-                  {/* Mobile tap hint badge */}
-                  <div className="absolute top-2 right-2 bg-black/40 rounded-full p-1 md:hidden">
-                    <ZoomIn className="w-3 h-3 text-white" />
-                  </div>
-                </div>
-              );
-            })}
+    <div className="flex flex-wrap justify-center gap-2 mb-12">
+      {['all', 'worship', 'youth', 'outreach', 'prayer', 'events', 'department'].map((category) => (
+        <button key={category} onClick={() => setActiveTab(category)}
+          className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${activeTab === category ? 'bg-indigo-600 text-white shadow-md' : 'bg-white text-gray-700 hover:bg-indigo-50 border border-gray-200'}`}>
+          {category.charAt(0).toUpperCase() + category.slice(1)}
+        </button>
+      ))}
+    </div>
+
+    {/* Gallery Grid — 2 cols on mobile, 3 on md, 4 on lg */}
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {filteredImages.map((item) => {
+        const currentIndex = galleryImageIndexes[item.id] || 0;
+        const images = item.images || [];
+        return (
+          <div
+            key={item.id}
+            onClick={() => openLightbox(item.id)}
+            className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer bg-white"
+            style={{ aspectRatio: '1/1' }}
+          >
+            <img
+              src={images[currentIndex]}
+              alt={item.title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            {/* Multiple images dot indicator */}
+            {images.length > 1 && (
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1 z-10">
+                {images.map((_, imgIdx) => (
+                  <div key={imgIdx} className={`rounded-full transition-all duration-300 ${imgIdx === currentIndex ? 'bg-white w-4 h-1.5' : 'bg-white/60 w-1.5 h-1.5'}`} />
+                ))}
+              </div>
+            )}
+            {/* Hover overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end pb-6 pointer-events-none">
+              <ZoomIn className="w-6 h-6 text-white mb-2" />
+              <p className="text-white font-serif text-sm text-center px-3">{item.title}</p>
+            </div>
+            {/* Mobile tap hint badge */}
+            <div className="absolute top-2 right-2 bg-black/40 rounded-full p-1.5 md:hidden">
+              <ZoomIn className="w-3 h-3 text-white" />
+            </div>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
       {/* ─── ABOUT SECTION ─── */}
       <section id="about" className="pt-20 pb-6 px-4 bg-white">
@@ -542,6 +563,11 @@ const RCCGJesusPillar = () => {
                 <a href="https://www.facebook.com/share/15aifHbLZC5/?mibextid=wwXIfr" className="bg-indigo-600 p-3 rounded text-white hover:bg-indigo-700 transition"><Facebook className="w-5 h-5" /></a>
                 <a href="https://www.instagram.com/rccgyayajp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="bg-indigo-600 p-3 rounded text-white hover:bg-indigo-700 transition"><Instagram className="w-5 h-5" /></a>
                 <a href="https://x.com/rccgyayajp?t=fdQ5YC5NpWy800eiloI03w&s=09" className="bg-indigo-600 p-3 rounded text-white hover:bg-indigo-700 transition"><Twitter className="w-5 h-5" /></a>
+                <a href="https://www.tiktok.com/@rccgjesuspillar?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" className="bg-indigo-600 p-3 rounded text-white hover:bg-indigo-700 transition">
+  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+</a>
               </div>
             </div>
           </div>
@@ -551,7 +577,7 @@ const RCCGJesusPillar = () => {
       {/* Footer */}
       <footer className="bg-[#1A237E] text-[#f2f2f2] py-4 px-4 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-400">2025 RCCG Jesus Pillar. All rights reserved</p>
+          <p className="text-gray-400">2026 RCCG Jesus Pillar. All rights reserved</p>
         </div>
       </footer>
 
