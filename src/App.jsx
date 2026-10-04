@@ -111,7 +111,7 @@ const RCCGJesusPillar = () => {
     { id: 'tithe', label: 'Tithe And Offering', icon: '🌾', desc: 'Your 10% unto the Lord / A freewill offering', bank: 'Access Bank', accountName: 'RCCG Jesus Pillar Tithe', accountNumber: '0044992158' },
     { id: 'offering', label: 'Project Offering', icon: '🕊️', desc: 'Growing Our Church', bank: 'Zenith Bank', accountName: 'RCCG Jesus Pillar', accountNumber: '1214026981' },
     { id: 'mission', label: 'Children Gift Giving', icon: '🌍', desc: 'Give to the Children Department', bank: 'Zenith Bank', accountName: 'RCCG Jesus Pillar Children Account', accountNumber: '1225585758' },
-   { id: 'mission', label: 'Children Christmas Carol', icon: '🎄', desc: 'Christmas carol party per child #7000', bank: 'First Bank', accountName: 'Oladepo Mutiyat Mayowa', accountNumber: '3233064906' }
+   { id: 'carol', label: 'Children Christmas Carol', icon: '🎄', desc: 'Christmas carol party per child #7000', bank: 'First Bank', accountName: 'Oladepo Mutiyat Mayowa', accountNumber: '3233064906' }
   ];
 
   const filteredImages = activeTab === 'all' ? galleryImages : galleryImages.filter(img => img.category === activeTab);
