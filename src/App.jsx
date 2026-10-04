@@ -103,13 +103,15 @@ const RCCGJesusPillar = () => {
     { id: 9, category: 'department', title: 'Choir', images: ['images/choir6.jpg','images/Choir1.jpg','images/Choir3.jpg','images/Choir4.jpg'] },
     { id: 10, category: 'department', title: 'Media', images: ['images/Media.jpg'] },
     { id: 11, category: 'department', title: 'Drama', images: ['images/drama.jpg'] },
-     { id: 12, category: 'department', title: 'Usher', images: ['images/Ushers.jpg'] }
+     { id: 12, category: 'department', title: 'Usher', images: ['images/Ushers.jpg'] },
+      { id: 13, category: 'events', title: ' Paul and Silas Praise', images: ['images/Paul1.jpeg','images/Paul2.jpeg','images/paul3.jpeg','images/paul4.jpeg','images/paul5.jpeg','images/paul6.jpeg','images/paul7.jpeg','images/paul8.jpeg','images/paul9.jpeg', 'images/paul10.jpeg', 'images/paul11.jpeg','images/paul12.jpeg','images/paul13.jpeg','images/paul14.jpeg','images/paul15.jpeg','images/paul16.jpeg','images/paul17.jpeg', 'images/paul18.jpeg', 'images/paul19.jpeg','images/paul20.jpeg','images/paul21.jpeg','images/paul22.jpeg','images/paul23.jpeg','images/paul24.jpeg','images/paul25.jpeg'] }
   ];
 
   const funds = [
     { id: 'tithe', label: 'Tithe And Offering', icon: '🌾', desc: 'Your 10% unto the Lord / A freewill offering', bank: 'Access Bank', accountName: 'RCCG Jesus Pillar Tithe', accountNumber: '0044992158' },
     { id: 'offering', label: 'Project Offering', icon: '🕊️', desc: 'Growing Our Church', bank: 'Zenith Bank', accountName: 'RCCG Jesus Pillar', accountNumber: '1214026981' },
-    { id: 'mission', label: 'Children Gift Giving', icon: '🌍', desc: 'Give to the Children Department', bank: 'Zenith Bank', accountName: 'RCCG Jesus Pillar Children Account', accountNumber: '1225585758' }
+    { id: 'mission', label: 'Children Gift Giving', icon: '🌍', desc: 'Give to the Children Department', bank: 'Zenith Bank', accountName: 'RCCG Jesus Pillar Children Account', accountNumber: '1225585758' },
+   { id: 'mission', label: 'Children Christmas Carol', icon: '🎄', desc: 'Christmas carol party per child #7000', bank: 'First Bank', accountName: 'Oladepo Mutiyat Mayowa', accountNumber: '3233064906' }
   ];
 
   const filteredImages = activeTab === 'all' ? galleryImages : galleryImages.filter(img => img.category === activeTab);
